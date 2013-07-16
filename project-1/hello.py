@@ -1,8 +1,9 @@
 #! /usr/bin/python
 
-#import Tkinter
-
 from Tkinter import *
+
+from function import G_Print_Version
+from function import G_Add_Function
 
 def G_Show_Me(name):
 	print name
@@ -36,23 +37,18 @@ name = 'kevin'
 for i in range(0,d):
 	if i == 2:
 		print name,"~",i
-
-for c in name:
-	print c
-
-print "be careful"
-for j in range(5,10+1,1):
-	print j
-
-if name == 'kevin':
-	print "kevin"
-else:
-	print "bad"
-
 i = 0
+
 while i<=5: 
 	print i	
 	i = i + 1
+
+l5 = [10,5,21,49,6,0]
+l5.sort()
+print l5
+
+G_Print_Version()
+print G_Add_Function(99,101)
 
 base = Base()
 base.show_name()
