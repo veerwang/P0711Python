@@ -37,6 +37,27 @@
 (display (mynewfun "veer" "putian"))
 
 (newline)
+
+(do ((i 0 (+ 1 i)))
+ ((> i 4))
+ (display (mynewfun "fuck" "samming"))
+ (newline)
+ )
+
+(do ((j 0 (+ 1 j)))
+  ((> j 5))
+  (display "happy")
+  (newline)
+  )
+
+(if #T
+  ((newline)
+  (display "holy shit")
+  (newline))
+ )
+
+
+
 (begin (display "hello the world!")
        (newline)
        (display (f 8))
