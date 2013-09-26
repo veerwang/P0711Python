@@ -8,6 +8,11 @@ import math
 import urllib2
 import zlib
 
+#need install sh lib
+# yum install sh
+# pip install sh
+from sh import ls,df
+
 print "import test"
 
 #print current path
@@ -20,8 +25,8 @@ print glob.glob('*.py')
 
 print math.pi
 
-for line in urllib2.urlopen("http://baidu.com"):
-	print line
+#for line in urllib2.urlopen("http://baidu.com"):
+#	print line
 
 s = "www.eddysun.comdsdsdsdsdsdsdsdsdshdshdsd"
 t = zlib.compress(s)
@@ -33,6 +38,14 @@ print len(t)
 print t
 print len(n)
 print n
+
+print "-----------------------------------"
+print math.sin(math.pi/4)
+
+
+print ls("-la")
+print df("-h")
+
 
 
 #exit program directory

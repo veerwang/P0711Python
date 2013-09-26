@@ -5,4 +5,3 @@ def G_Print_Version():
 
 def G_Add_Function(a,b):
 	return a + b
-
