@@ -7,6 +7,7 @@ import sys
 import math
 import urllib2
 import zlib
+import Image
 
 #need install sh lib
 # yum install sh
