@@ -48,6 +48,7 @@ print a
 class Baseclass:
 	def __init__(self,id):
 		self.m_ID = id
+		print "create Baseclass"
 
 	def __del__(self):
 		print "destroy Baseclass"
@@ -61,6 +62,9 @@ bs.ShowmeID()
 class Drivedclass(Baseclass):
 	def __del__(self):
 		print "destroy Deviedclass"
+	def __init__(self,id):
+		self.m_ID = id
+		print "create Driverclass"
 
 ds = Drivedclass(21)
 ds.ShowmeID()
@@ -84,3 +88,12 @@ print glob.glob("*.py")
 import math
 print math.cos(math.pi/4)
 print math.pow(10,2)
+
+print "---------------------"
+temp = 2
+print temp
+
+del temp
+
+temp = 5
+print temp
