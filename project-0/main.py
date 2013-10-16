@@ -2,13 +2,15 @@
 
 #program block 
 import sys
+from timeit import Timer
 
 print __name__
 print dir(sys)
 
+print Timer('x = 1000 / 20','x=1').timeit()
+print Timer('x = 1000 / 20','x=1').timeit()
 
 x = 1000 / 20
-
 print 'x = ' + str(x) 
 print '5'.zfill(5)
 
