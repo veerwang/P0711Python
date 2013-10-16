@@ -1,6 +1,21 @@
 #! /usr/bin/python
 
 #program block 
+import sys
+
+print __name__
+print dir(sys)
+
+
+x = 1000 / 20
+
+print 'x = ' + str(x) 
+print '5'.zfill(5)
+
+
+print "{0} love {1}".format('kevin','lingjian')
+
+
 a = 0
 while a < 7:
 	if a == 4:

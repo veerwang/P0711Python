@@ -7,7 +7,6 @@ import sys
 import math
 import urllib2
 import zlib
-import Image
 
 #need install sh lib
 # yum install sh
@@ -29,7 +28,7 @@ print math.pi
 #for line in urllib2.urlopen("http://baidu.com"):
 #	print line
 
-s = "www.eddysun.comdsdsdsdsdsdsdsdsdshdshdsd"
+s = "www.eddysun.com"
 t = zlib.compress(s)
 n = zlib.decompress(t)
 
