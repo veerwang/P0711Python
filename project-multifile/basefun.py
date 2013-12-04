@@ -17,3 +17,5 @@ class Basefun:
 		self.__m_ID = id
 	def Get_ID(self):
 		return self.__m_ID
+	def Chang_Value(self,value):
+		value[0] = value[0] + 50;
