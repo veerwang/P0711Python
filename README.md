@@ -10,3 +10,8 @@ python
 hello.py		该文件用于熟悉python语法
 
 第二条：单双引号都是一样的。
+
+
+第三条 :当C++与Python进行混合调用的时候，.py文件会先被编译成为.pyc文件
+
+第四条 :https://pypi.python.org/pypi/      python的各种资源库
