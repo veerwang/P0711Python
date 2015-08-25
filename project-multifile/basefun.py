@@ -19,3 +19,9 @@ class Basefun:
 		return self.__m_ID
 	def Chang_Value(self,value):
 		value[0] = value[0] + 50;
+
+class Subclass(Basefun):
+	def __init__(self):
+		print "subclass create"
+	def __del__(self):
+		print "subclass destroy"
