@@ -18,7 +18,7 @@ if __name__ == '__main__':
     fd.seek(0);
     nfd = open(os.getcwd()+"/data/newrawfile",'wb')
     size = os.path.getsize(os.getcwd()+"/data/rawfile")
-    print ("size = " + str(size))     #注意int转换为string
+    print("size = " + str(size))     #注意int转换为string
 
     for i in range(0,size):
         buf = fd.read(1)
