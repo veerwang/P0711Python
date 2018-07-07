@@ -1,6 +1,8 @@
 #coding=utf-8
 
 import os
+import struct
+
 #
 # 全局变量
 #
@@ -12,8 +14,38 @@ g_version = "1.0.0"
 def g_print_version():
     print("Programe: version = " + g_version)
 
+#########
+
 def g_print_os_info():
     print("Python Work Directory: " + os.getcwd())
+
+#########
+
+def process_file():
+    fd = open(os.getcwd()+"/data/rawfile",'rb')
+    fd.seek(0);
+    nfd = open(os.getcwd()+"/data/newrawfile",'wb')
+    size = os.path.getsize(os.getcwd()+"/data/rawfile")
+    print("size = " + str(size))     #注意int转换为string
+
+    for i in range(0,size):
+        buf = fd.read(1)
+        if i == 5 :
+            cbuf = int('00',16) 
+            for j in range(0,100):
+                xbuf = struct.pack("B",cbuf)
+                nfd.write(xbuf)
+        nfd.write(buf)
+
+    fd.close();
+    nfd.close();
+ 
+#########
+
+def g_do_print_times(times): 
+    while(times):
+        g_print_version()
+        times -= 1
 
 #
 # 全局类
