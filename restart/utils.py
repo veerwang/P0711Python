@@ -47,6 +47,9 @@ def g_do_print_times(times):
         g_print_version()
         times -= 1
 
+def g_tuple_return(x,y):
+    return x+y,x*y
+
 #
 # 全局类
 #
