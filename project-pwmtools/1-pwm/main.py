@@ -19,7 +19,9 @@ def main():
     print("Pwm tools starting ...")
     utils.g_display_char('H')
 
-    elf = pwn.ELF('./bin/cat');  #导入cat二进制文件
+    bin_name = './bin/cat'
+    elf = pwn.ELF(bin_name);  #导入cat二进制文件
+    print("BIN NAME: "+bin_name+"; ADDRESS: 0x"+str(elf.address))
 
 if __name__ == '__main__':
     main()
