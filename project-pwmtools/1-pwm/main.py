@@ -19,7 +19,7 @@ def main():
     print("Pwm tools starting ...")
     utils.g_display_char('H')
 
-    elf = pwn.ELF('./bin/cat');
+    elf = pwn.ELF('./bin/cat');  #导入cat二进制文件
 
 if __name__ == '__main__':
     main()
