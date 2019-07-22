@@ -25,3 +25,8 @@ class Subclass(Basefun):
 		print "subclass create"
 	def __del__(self):
 		print "subclass destroy"
+
+class   Utilsclass:
+    __mVersion = 100;
+    def getVersion:
+        return __mVersion;

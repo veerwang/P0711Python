@@ -4,6 +4,7 @@
 import globle
 import basefun
 import platform
+import public
 
 if __name__ == '__main__':
 	print 
@@ -15,6 +16,7 @@ if __name__ == '__main__':
 
 	cf = basefun.Subclass()
 	cf.Set_ID(29)
+        cf.Get_ID()
 	print "Subclass %d" % cf.Get_ID()
 	#print "Chang Value:%d" % (value)   		# 格式化输出
 	print value[0]   				# 格式化输出
