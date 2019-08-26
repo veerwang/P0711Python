@@ -30,5 +30,5 @@ if __name__ == '__main__':
     try:
         init_sqlite_database()
     except Exception as e:
-        print("kevin -->")
+        logging.info("kevin -->")
         logging.info(e) 
