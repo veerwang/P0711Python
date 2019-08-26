@@ -2,6 +2,10 @@
 #coding=utf-8
 
 import sqlite3
+import logging
+
+def init_log():
+    logging.basicConfig(filename='debug.log',level=logging.INFO)
 
 def init_sqlite_database():
     # 创建一个数据库
@@ -21,9 +25,10 @@ def init_sqlite_database():
 
 if __name__ == '__main__':
     print("sqlite3 database test")
+    init_log()
 
     try:
         init_sqlite_database()
     except Exception as e:
         print("kevin -->")
-        print(e)
+        logging.info(e) 
