@@ -8,6 +8,7 @@
 # 版本:		1.0.0     
 
 import os
+import utils.fileopt as FileOpt
 
 def yield_test(mylist):
     for ml in mylist:
@@ -19,3 +20,5 @@ if __name__ == '__main__':
     newlist = yield_test(mylist)
     for aa in newlist:
         print(aa)
+
+    FileOpt.init_file()
