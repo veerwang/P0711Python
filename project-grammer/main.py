@@ -9,6 +9,7 @@
 
 import os
 import utils.fileopt as FileOpt
+from utils.fileopt import Global
 
 def yield_test(mylist):
     for ml in mylist:
@@ -22,3 +23,6 @@ if __name__ == '__main__':
         print(aa)
 
     FileOpt.init_file()
+
+    myglobal = Global("cve")
+    myglobal.showme()
