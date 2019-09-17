@@ -14,13 +14,16 @@ from utils.fileopt import Global
 def yield_test(mylist):
     for ml in mylist:
         yield ml + 2
+        print("aa")
 
 if __name__ == '__main__':
     print("hello the world")
     mylist = [1,2,3,4]
     newlist = yield_test(mylist)
+    print("bb")
     for aa in newlist:
         print(aa)
+        print("cc")
 
     FileOpt.init_file()
 
