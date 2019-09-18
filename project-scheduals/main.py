@@ -11,19 +11,26 @@ import os
 import schedule
 import time
 
-def job():
-    print("hello the world")
+def Onejob():
+    print("1 seconds task")
+
+def Twojob():
+    print("2 seconds task")
 
 if __name__ == '__main__':
     print("starting ... schedule process")
-    myjob = schedule.every(1).seconds.do(job)
+    myjob = schedule.every(1).seconds.do(Onejob)
+    sejob = schedule.every(2).seconds.do(Twojob)
+    sejob.tag("sejob")
 
     runtime = 0
     while True:
         schedule.run_pending()
         time.sleep(1)
         runtime = runtime + 1 
-        if runtime == 3:
+        if runtime == 4:
             schedule.cancel_job(myjob)
+        elif runtime == 6:
+            schedule.clear("sejob")
         else:
             print(str(runtime))
