@@ -72,6 +72,24 @@ def join_string():
     newstr = flag.join(str)
     print(newstr)
 
+def translate_string():
+    # 比较神奇将字符串中的字符进行替换
+    str = 'hello the world'
+    instr = 'eo'
+    outstr = '23'
+    trantab = str.maketrans(instr,outstr)
+    newstr = str.translate(trantab)
+    print(newstr)
+
+# 是失败的
+def del_string():
+    str = 'hello the world'
+    instr = 'eo'
+    outstr = 'eo'
+    trantab = str.maketrans(instr,outstr)
+    newstr = str.translate(trantab)
+    print(newstr)
+
 if __name__ == '__main__':
     print("string programe")
     find_string()
@@ -85,3 +103,5 @@ if __name__ == '__main__':
     partition_string()
     splitlines_string()
     join_string()
+    translate_string()
+    del_string()
