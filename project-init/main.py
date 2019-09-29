@@ -9,8 +9,9 @@
 
 import os
 import libutils.mythread
+import libutils
 
 if __name__ == '__main__':
     print("hello the world")
     print('version: ' + libutils.mythread.get_version() )
-    libutils.libexutils.exutils.get_exutils_version()
+    print('Exutils Version: ' + libutils.Exutils.get_exutils_version())
