@@ -6,6 +6,8 @@
 # 创建人: 	kevin.wang
 # 创建日期:     2019年10月29日 
 # 版本:		1.0.0     
+# 参考网页
+# https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064
 
 from multiprocessing import Process
 from multiprocessing import Pool 
@@ -25,6 +27,7 @@ def single_process():
 
 ########################################
 # 多进程
+#
 def long_time_task(name):
     print('Run task %s (%s)...' % (name, os.getpid()))
     start = time.time()
@@ -35,7 +38,7 @@ def long_time_task(name):
 def multi_process():
     print('Parent process %s.' % os.getpid())
     p = Pool(4)
-    for i in range(5):
+    for i in range(10):
         p.apply_async(long_time_task, args=(i,))
 
     print('Waiting for all subprocesses done...')
