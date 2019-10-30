@@ -9,12 +9,14 @@
 
 import os
 
-# 静态分析的进程
-static_process_handle   = None
-# 动态分析的进程
-dynamic_process_handle  = None
-# queue
-process_queue           = None
+# 进行进程间命令传递的变量
+class command:
+    def __init__(self):
+        self.mcmd = None
+        print("class create")
+    def __del__(self):
+        self.mcmd = None
+        print("class destroy")
 
 if __name__ == '__main__':
     print("hello the world")
