@@ -11,6 +11,7 @@
 
 from multiprocessing import Process,Queue,Pipe
 from multiprocessing import Pool 
+from multiprocessing import Manager
 import os,time,random
 
 # 子进程要执行的代码
@@ -73,7 +74,7 @@ def process_read(q):
         print('Get %s from queue.' % value)
 
 def communication_process():
-    q = Queue()
+    q  = Queue()
     pw = Process(target=process_write, args=(q,))
     pr = Process(target=process_read, args=(q,))
     # 启动子进程pw，写入:
@@ -84,6 +85,20 @@ def communication_process():
     pw.join()
     # pr进程里是死循环，无法等待其结束，只能强行终止:
     pr.terminate()
+
+def communication_process_pool():
+    po = Pool(4)
+
+    for i in range(10):
+        print("kevin --->" + str(i))
+        q = Manager().Queue()
+        po.apply_async(process_write,args=(q,))
+        time.sleep(2)
+        po.apply_async(process_read,args=(q,))
+
+    po.close()
+    po.join
+
 
 # 通过pipe进行通讯
 def after(conn):
@@ -111,10 +126,12 @@ def apipe_process():
     p2.join()
 
 if __name__ == '__main__':
-    apipe_process()
+    communication_process_pool()
     print("<========>")
-    single_process()
+    #apipe_process()
     print("<========>")
-    multi_process()
+    #single_process()
     print("<========>")
-    communication_process()
+    #multi_process()
+    print("<========>")
+    #communication_process()
