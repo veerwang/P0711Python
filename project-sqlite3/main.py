@@ -3,6 +3,7 @@
 
 import sqlite3
 import logging
+import sqlite3mrg
 
 def init_log():
     logging.basicConfig(filename='debug.log',level=logging.INFO)
@@ -100,8 +101,22 @@ if __name__ == '__main__':
         #init_sqlite_database()
         #project_test()
         #read_table()
-        database_operator_init('veer','world')
-        database_operator_read('veer')
+        #database_operator_init('veer','world')
+        #database_operator_read('veer')
+
+        # 显示数据库中的全部的表名
+        table_name = sqlite3mrg.database_get_data('test.db','select name from sqlite_master where type=\'table\' order by name')
+        # 显示数据库中的每个表的段名
+        index = 0
+        for tn in table_name:
+            index = index + 1 
+            print( "[{}]. table name: ==>".format(index) + tn[0])
+            cmd = 'pragma table_info({})'.format(tn[0])
+            print(sqlite3mrg.database_get_data('test.db',cmd))
+            print('value ==>')
+            print(sqlite3mrg.database_get_data('test.db','select * from {}'.format(tn[0])))
+            print('---')
+
     except Exception as e:
         logging.info(e) 
         print(e)
