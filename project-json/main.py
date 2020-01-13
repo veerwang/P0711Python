@@ -12,7 +12,7 @@ import json
 import pathlib
 
 def save_json(path):
-    data = { 'target sdk':'16','api version':'15'  }
+    data = { "target sdk":"16","api version":"15","version":"['5','6','7']"  }
     p = pathlib.Path(path)
     if p.exists():
         os.remove(path)
@@ -26,6 +26,10 @@ def load_json(path):
         with open(path,'r') as fp:
             data = json.load(fp) 
             print(data['target sdk'])
+            print(data['version'])
+            alist = eval(data['version'])
+            for v in alist:
+                print(v)
 
 if __name__ == '__main__':
     print("json programe")
