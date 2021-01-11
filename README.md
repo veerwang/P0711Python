@@ -32,3 +32,6 @@ b.import utils
 第七条: python程序进行打包
 a. pip install pyinstaller   安装pyinstaller安装包
    pyinstaller --oneline main.py   这样就会将main.py相关的信息打包进入dist/main的文件中，并且是一个可执行的权限
+
+第八条：参考文档
+https://cloud.tencent.com/developer/article/1469907
