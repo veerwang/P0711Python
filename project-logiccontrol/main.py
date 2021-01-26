@@ -1,6 +1,5 @@
-#! /usr/bin/python
+#! /usr/bin/env python3
 #coding=utf-8
-
 
 def main():
     x = 5
@@ -9,9 +8,13 @@ def main():
         x = x - 1
         if x == 2:
             break
-    else:
-        print("loop normal end")
+        elif x == 3:
+            print("x=3")
+        else:
+            print("loop normal end")
 
+    for i in range(5):
+        print(str(i))
 
 if __name__=="__main__":
     main()
