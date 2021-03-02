@@ -10,12 +10,10 @@
 
 import os
 from alive_progress import alive_bar
+from alive_progress import showtime
 import time
 
 if __name__ == '__main__':
     print("start alive progress test")
 
-    with alive_bar(10,bar ='circles') as bar:
-        for i in range(10): 
-            time.sleep(0.1)
-            bar()
+    showtime()
