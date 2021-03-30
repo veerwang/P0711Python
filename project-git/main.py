@@ -15,4 +15,4 @@ if __name__ == '__main__':
     r = Repo('.')	
     r.head()
     c = r[r.head()]
-    print(c.message)
+    print(c.message.decode('utf-8'))
