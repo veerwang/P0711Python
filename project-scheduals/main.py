@@ -1,5 +1,5 @@
-#! /usr/bin/python
-#coding=utf-8
+#! /usr/bin/python3
+# coding=utf-8
 
 #
 # 描述:		工程测试		 
@@ -17,11 +17,16 @@ def Onejob():
 def Twojob():
     print("2 seconds task")
 
+def Thirdjob():
+    print("3 seconds task")
+
 if __name__ == '__main__':
     print("starting ... schedule process")
     myjob = schedule.every(1).seconds.do(Onejob)
     sejob = schedule.every(2).seconds.do(Twojob)
     sejob.tag("sejob")
+
+    schedule.every().day.at('16:55').do(Thirdjob)
 
     runtime = 0
     while True:
