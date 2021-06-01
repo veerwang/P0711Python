@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/env python3
 #coding=utf-8
 
 #
@@ -9,12 +9,19 @@
 
 import os
 import time
+import datetime
 
 def calculate_io_process():
-    time.sleep(3)
+    time.sleep(1)
+
+def print_time():
+    ntime = datetime.datetime.strptime("2022 17:22:00","%Y %H:%M:%S")
+    print(ntime)
+
 
 if __name__ == '__main__':
     startime = time.time()
     calculate_io_process()
     endtime  = time.time()
     print(endtime - startime)
+    print_time()
