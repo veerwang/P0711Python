@@ -18,12 +18,12 @@ if __name__ == '__main__':
     calendar.setfirstweekday(0)
 
     # calendar(year, w=2, l=1, d=3, n=6)
-    # w: 每个日期两个字符
-    # l: 每行显示几行
+    # w: 每个日期两个字符，一般年都是2
+    # l: 每行显示几行,一般都是1
     # d: 月与月的间隔
     # n: 每行显示几个月
-    result = calendar.calendar(datetime.datetime.now().year, 2, 1, 3, 3)
-
+    # result = calendar.calendar(datetime.datetime.now().year, 2, 1, 3, 1)
+    result = calendar.month(datetime.datetime.now().year, 6, 2, 1)
     strlist = result.split('\n')
     for i in range(len(strlist)):
         print(strlist[i])
