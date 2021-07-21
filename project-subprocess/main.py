@@ -9,11 +9,25 @@
 """
 
 
+import os
 import subprocess
 
 
 if __name__ == '__main__':
-    p = subprocess.Popen('ls', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    strlist = []
+    mystr = ''
+    # 以下的设置，是看错误输出信息
+    p = subprocess.Popen('task', shell=True,
+                         stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    # 以下的设置，是不看错误输出信息
+    # p = subprocess.Popen('task', shell=True,
+    #                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     for line in p.stdout.readlines():
-        print(line)
+        # print(str(line, encoding='utf-8'))
+        mystr = mystr + str(line, encoding='utf-8')
     retval = p.wait()
+    print(mystr)
+    strlist = mystr.split('\n')
+    for s in strlist:
+        print(s)
+    print(os.environ)
