@@ -20,3 +20,7 @@ if __name__ == '__main__':
         # 临时文件的名称
         print(fp.name)
         fp.close()
+
+    # 获得一个临时目录名称
+    dirname = tempfile.mktemp()
+    print(dirname)
