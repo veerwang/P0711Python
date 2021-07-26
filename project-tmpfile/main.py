@@ -13,8 +13,10 @@ import tempfile
 
 
 if __name__ == '__main__':
-    with tempfile.NamedTemporaryFile(dir='.', delete=False) as fp:
+    with tempfile.NamedTemporaryFile(dir='/tmp/', delete=False) as fp:
         fp.write(b'Hello world!')
         fp.seek(0)
         fp.read()
+        # 临时文件的名称
+        print(fp.name)
         fp.close()
