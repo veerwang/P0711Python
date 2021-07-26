@@ -22,4 +22,13 @@
 
 extern "C" {
 int getVersion() { return 100; }
+int addAlgorithm(int a, int b) {
+	return a + b;
+}
+bool getFlag(int value) {
+	if (value > 10)
+		return true;
+	else
+		return false;
+}
 }

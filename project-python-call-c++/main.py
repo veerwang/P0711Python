@@ -18,3 +18,6 @@ if __name__ == '__main__':
     solib = cdll.LoadLibrary(os.getcwd()+ "/libutils.so.0.0")
     version = solib.getVersion()
     print(version)
+    print(solib.addAlgorithm(10,20))
+    print(solib.getFlag(20))
+    print(solib.getFlag(9))
