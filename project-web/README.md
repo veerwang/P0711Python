@@ -14,3 +14,7 @@ python -m http.server
 
 ## 3.安装工具
 pyenv:  使用系统自带的工具进行安装
+
+## 附录
+国内下载各个版本的python的路径
+https://registry.npmmirror.com/binary.html?path=python/
