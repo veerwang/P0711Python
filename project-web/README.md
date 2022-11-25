@@ -16,18 +16,24 @@ python -m http.server
 pyenv:  使用系统自带的工具进行安装
 
 ## 4.django如何使用
-a.pyenv安装相关的python版本
+### pyenv安装相关的python版本
 
 ``` shell
 cd web-server
 pyenv install 3.8.15
 pyenv local 3.8.15
 python --version 确认版本
+```
+
+### 创建一个Django的服务器
+``` shell
 pip install django
 django startproject smartcube(项目名称)
 cd smartcube
 python manager runserver
 ```
+参考链接:
+https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment
 
 ## 附录
 国内下载各个版本的python的路径
