@@ -32,6 +32,13 @@ django startproject smartcube(项目名称)
 cd smartcube
 python manager runserver
 ```
+
+### 在models中创建数据
+a.修改apps中的models.py文件
+b.使用makeimagration创建0001之类的数据文件
+c.使用imagrate创建数据库数据
+
+
 参考链接:
 https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment
 
