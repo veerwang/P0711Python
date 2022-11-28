@@ -38,6 +38,9 @@ a.修改apps中的models.py文件
 b.使用makeimagration创建0001之类的数据文件
 c.使用imagrate创建数据库数据
 
+## 5.获取Django的工作目录
+python -c "import django; print(django.__path__)"
+
 
 参考链接:
 https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment
