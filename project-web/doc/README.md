@@ -43,8 +43,13 @@ python manage.py startapp login   #login是app的名称
 ### 在models中创建数据
 a.修改apps中的models.py文件
 b.使用makeimagration创建0001之类的数据文件
-c.使用imagrate创建数据库数据
+c.使用migrate创建数据库数据
+以下命令用于展示0001脚本执行的内容
+    python manage.py sqlmigrate xxx-app 0001
 d.注意还需要在工程的settings.py目录中进行应用注册
+e.如果要想在django的后台服务进行管理，还需要进行注册
+在应用之下的admin.py中进行注册
+admin.site.register(Person)
 
 参考链接:
 https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment
