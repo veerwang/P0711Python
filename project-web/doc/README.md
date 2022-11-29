@@ -31,6 +31,7 @@ pip install django
 django startproject smartcube(项目名称)
 cd smartcube
 python manager runserver
+python manager shell            #进入python交互界面
 ```
 
 ### 创建一个Django的应用
