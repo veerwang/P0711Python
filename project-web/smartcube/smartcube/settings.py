@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ["192.168.1.247", "localhost"]
 
 # Application definition
 INSTALLED_APPS = [
+    'login.apps.LoginConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -72,7 +73,7 @@ WSGI_APPLICATION = 'smartcube.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# others database such as django.db.backends.mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

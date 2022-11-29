@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("这里首个登陆页面")
+    return render(request, 'login/login.html')
