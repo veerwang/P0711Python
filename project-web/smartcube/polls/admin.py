@@ -15,9 +15,6 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ['pub_date']
     search_fields = ['question_text']
 
-
-admin.site.site_header = '智能柜子管理后台'  # 设置header
-admin.site.site_title = '智能柜子管理后台登陆界面'   # 设置title
 admin.site.index_title = '智能柜子数据管理'  # 登陆标题
 
 admin.site.register(Question, QuestionAdmin)
