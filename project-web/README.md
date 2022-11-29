@@ -38,12 +38,17 @@ a.修改apps中的models.py文件
 b.使用makeimagration创建0001之类的数据文件
 c.使用imagrate创建数据库数据
 
+参考链接:
+https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment
+
 ## 5.获取Django的工作目录
 python -c "import django; print(django.__path__)"
 
-
-参考链接:
-https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment
+## 6.安装vue开发环境
+a.预先装好npm
+b.npm init vue@latest   #安装最新的vue框架
+参考
+https://cn.vuejs.org/
 
 ## 附录
 国内下载各个版本的python的路径
