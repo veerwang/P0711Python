@@ -25,13 +25,19 @@ pyenv local 3.8.15
 python --version 确认版本
 ```
 
-### 创建一个Django的服务器
+### 创建一个Django的服务工程
 ``` shell
 pip install django
 django startproject smartcube(项目名称)
 cd smartcube
 python manager runserver
 ```
+
+### 创建一个Django的应用
+``` shell
+python manage.py startapp login   #login是app的名称
+```
+![目录结构](assets/appstruct.png "目录结构")
 
 ### 在models中创建数据
 a.修改apps中的models.py文件
