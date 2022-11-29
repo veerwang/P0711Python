@@ -1,0 +1,3 @@
+#! /usr/bin/bash
+echo Starting Django Server ...
+python manage.py runserver 0.0.0.0:9981
