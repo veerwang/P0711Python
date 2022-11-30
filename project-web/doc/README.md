@@ -69,3 +69,13 @@ ORM全称是：Object Relational Mapping(对象关系映射)，其主要作用�
 ## 附录
 国内下载各个版本的python的路径
 https://registry.npmmirror.com/binary.html?path=python/
+
+## 学习网站
+
+a.学习CSS网站
+https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS
+b.学习django
+https://www.liujiangblog.com/course/django/95
+https://docs.djangoproject.com/en/4.1/topics/db/models/
+c.学习view
+https://cn.vuejs.org/examples/#hello-world
