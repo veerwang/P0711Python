@@ -1,3 +1,4 @@
+/* 首个css文件，学习使用 */
 * {
     box-sizing: border-box;
 }
@@ -12,13 +13,19 @@ body {
 .header {
     padding: 80px;
     text-align: center;
-    background: #1abc9c;
-    color: white;
+    background: #A2DCFA;
+    color: black;
 }
 
 /* 标题字体加大 */
 .header h1 {
     font-size: 40px;
+		color:black;
+}
+
+.header p1 {
+    font-size: 18px;
+		color: black;
 }
 
 /* 导航 */
@@ -85,6 +92,7 @@ body {
     padding: 20px;
     text-align: center;
     background: #ddd;
+		color:red;
 }
 
 /* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
