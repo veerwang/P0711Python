@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: 微软雅黑;
+    margin: 0;
+		background-color: white;
+}
+
+/* 左半边视图显示 */
+.lefthalf {
+	width: 50%;
+	margin: 0;
+	float: left;
+	height: 100%;
+	/* 内容居中 */
+	text-align: center;
+}
+
+.smtitle {
+	font-size: 18;
+	color: gray;
+	text-align: center;
+	align-items: center;
+}
+
+.normaltitle {
+	font-size: 36;
+	color: black;
+	text-align: center;
+	align-items: center;
+}
+
+/* logo标签 */
+.logoimg {
+		background-color: white;
+		background-position: center;
+		text-align: center;
+}
+
+/* 左半边视图显示 */
+.righthalf {
+	width: 50%;
+	background-color: #A2DCFA;
+	margin: 0;
+	float: right;
+	height: 100%;
+	/* 内容居中 */
+	text-align: center;
+}
