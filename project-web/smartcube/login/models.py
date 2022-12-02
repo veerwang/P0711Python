@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 
@@ -15,20 +16,32 @@ class Person(models.Model):
 class User(models.Model):
     """正式的用户数据，用于管理账户"""
     # 登陆输入的用户名英文 xmadmin
-    Account = models.CharField(max_length=32, unique=True)
+    Account = models.CharField(max_length=32,
+                               verbose_name='登陆账户', unique=True)
     # 显示用户的名称，例如厦门水文站
     Name = models.CharField(max_length=64,
+                            verbose_name='用户名称',
                             default=bytes('用户名', encoding='utf-8'))
     # 密码, Hash-256
-    Password = models.CharField(max_length=256)
+    Password = models.CharField(max_length=256, verbose_name='登陆密码')
     # 权限 超级管理员,管理员，用户
-    Authority = models.IntegerField(default=0)
+    SUPPERADMIN = 'super'
+    ADMIN = 'admin'
+    CUSTOM = 'custom'
+    AUTH_CHOICE = [(SUPPERADMIN, '超级管理员'), (ADMIN, '管理员'), (CUSTOM, '普通用户')]
+    Authority = models.IntegerField(default=0,
+                                    choices=AUTH_CHOICE,
+                                    verbose_name='权限类型')
     # 属地省
-    LocationProvince = models.CharField(max_length=48)
+    LocationProvince = models.CharField(max_length=48, verbose_name='省级属地')
     # 属地市
-    LocationCity = models.CharField(max_length=48)
+    LocationCity = models.CharField(max_length=48, verbose_name='市级属地')
     # 属地Arae
-    LocationArea = models.CharField(max_length=48)
+    LocationArea = models.CharField(max_length=48, verbose_name='区县属地')
+
+    def save(self, *args, **kwargs):
+        self.Password = make_password(self.Password, None, 'pbkdf2_sha256')
+        super(User, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.Name
