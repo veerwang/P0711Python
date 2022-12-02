@@ -21,7 +21,7 @@ class User(models.Model):
     # 显示用户的名称，例如厦门水文站
     Name = models.CharField(max_length=64,
                             verbose_name='用户名称',
-                            default=bytes('用户名', encoding='utf-8'))
+                            default='用户名称')
     # 密码, Hash-256
     Password = models.CharField(max_length=256, verbose_name='登陆密码')
     # 权限 超级管理员,管理员，用户
@@ -29,9 +29,10 @@ class User(models.Model):
     ADMIN = 'admin'
     CUSTOM = 'custom'
     AUTH_CHOICE = [(SUPPERADMIN, '超级管理员'), (ADMIN, '管理员'), (CUSTOM, '普通用户')]
-    Authority = models.IntegerField(default=0,
-                                    choices=AUTH_CHOICE,
-                                    verbose_name='权限类型')
+    Authority = models.CharField(max_length=10,
+                                 default='custom',
+                                 choices=AUTH_CHOICE,
+                                 verbose_name='权限类型')
     # 属地省
     LocationProvince = models.CharField(max_length=48, verbose_name='省级属地')
     # 属地市
