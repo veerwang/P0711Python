@@ -17,7 +17,8 @@ class User(models.Model):
     # 登陆输入的用户名英文 xmadmin
     Account = models.CharField(max_length=32, unique=True)
     # 显示用户的名称，例如厦门水文站
-    Name = models.CharField(max_length=64, default=Account + '用户')
+    Name = models.CharField(max_length=64,
+                            default=bytes('用户名', encoding='utf-8'))
     # 密码, Hash-256
     Password = models.CharField(max_length=256)
     # 权限 超级管理员,管理员，用户
