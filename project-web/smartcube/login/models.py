@@ -4,15 +4,6 @@ from django.contrib.auth.hashers import make_password
 # Create your models here.
 
 
-class Person(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    phone_number = models.CharField(max_length=11, default='13488508087')
-
-    def __str__(self):
-        return self.first_name + self.last_name + ':' + self.phone_number
-
-
 class User(models.Model):
     """正式的用户数据，用于管理账户"""
     # 登陆输入的用户名英文 xmadmin
@@ -40,6 +31,12 @@ class User(models.Model):
     # 属地Arae
     LocationArea = models.CharField(max_length=48, verbose_name='区县属地')
 
+    # 管理属性
+    class Meta:
+        verbose_name = '智能柜子系统登陆账户'
+        verbose_name_plural = verbose_name
+
+    # 以下属于实际项目使用
     def save(self, *args, **kwargs):
         self.Password = make_password(self.Password, None, 'pbkdf2_sha256')
         super(User, self).save(*args, **kwargs)
