@@ -17,13 +17,25 @@ body {
 	height: 100%;
 	/* 内容居中 */
 	text-align: center;
+	position: relative;
 }
 
+/* 标题 */
 .smtitle {
 	font-size: 18;
 	color: gray;
 	text-align: center;
 	align-items: center;
+}
+
+/* logo标签 */
+.logoimg {
+		background-color: white;
+		background-position: center;
+		text-align: center;
+		position: absolute;
+		top: 35%;
+		left: 37%;
 }
 
 .normaltitle {
@@ -32,13 +44,13 @@ body {
 	text-align: center;
 	align-items: center;
 	font-weight: bold;
+	position: absolute;
+	top: 24%;
+	left: 33%;
 }
 
-/* logo标签 */
-.logoimg {
-		background-color: white;
-		background-position: center;
-		text-align: center;
+.titleblank {
+	padding-bottom: 60px;
 }
 
 /* 左半边视图显示 */
@@ -50,4 +62,43 @@ body {
 	height: 100%;
 	/* 内容居中 */
 	text-align: center;
+	position: relative;
+}
+
+.form-group {
+	padding: 5px;
+}
+
+.form-control {
+	background-color: #FAF7F7;
+	font-size: 14px;
+	border:1px #797979 solid;
+	border-radius: 8px;
+	padding: 10px 10px 10px 10px;
+}
+
+.form-control:focus {
+	background-color: #DEDBF5;
+	outline: 1px;
+	border-color: blue;
+}
+
+.form-btn {
+	width: 30%;
+	border-radius: 8px;
+	font-size: 14px;
+	padding: 10px 10px 10px 10px;
+	border-color: gray;
+}
+
+.form-btn:focus {
+	outline: 1px;
+	background-color: #F3CBCB;
+	border-color: black;
+}
+
+.form-btn:hover{
+	outline: 1px;
+	background-color: #F3CBCB;
+	border-color: black;
 }
