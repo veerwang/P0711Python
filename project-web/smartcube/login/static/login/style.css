@@ -93,8 +93,8 @@ body {
 
 .form-btn:focus {
 	outline: 1px;
-	background-color: #F3CBCB;
-	border-color: black;
+	background-color: #DEDBF5;
+	border-color: blue;
 }
 
 .form-btn:hover{
