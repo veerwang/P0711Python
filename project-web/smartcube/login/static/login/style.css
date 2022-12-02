@@ -67,6 +67,7 @@ body {
 
 .form-group {
 	padding: 5px;
+	text-align: center;
 }
 
 .form-control {
@@ -97,8 +98,26 @@ body {
 	border-color: blue;
 }
 
-.form-btn:hover{
+.form-btn:hover {
 	outline: 1px;
 	background-color: #F3CBCB;
 	border-color: black;
+}
+
+.versioninfo {
+	padding-top: 2px;
+	font-size: 1px;
+	color: #B0ABAB;
+	position: absolute;
+	right: 5px;
+	font-weight: normal;
+}
+
+.tipsinfo {
+	padding-top: 2px;
+	font-size: 1px;
+	color: #B0ABAB;
+	position: absolute;
+	right: 68px;
+	font-weight: normal;
 }
