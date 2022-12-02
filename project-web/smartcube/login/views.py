@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 import login.models
-
-from django.http import HttpResponse
+from django.contrib.auth.hashers import check_password
 
 
 # Create your views here.
@@ -14,11 +13,24 @@ def index(request):
             # 用户名字符合法性验证
             # 密码长度验证
             # 更多的其它验证.....
+            someone = None
             try:
-                print(username)
-                print(password)
+                someone = login.models.User.objects.get(Account=username)
             except:
-                return render(request, 'login/login.html')
-            if password == password:
+                message = '用户名或密码错误'
+                return render(request,
+                              'login/login.html', {"message": message})
+
+                if (someone is None):
+                    message = '无效用户名'
+                    return render(request,
+                                  'login/login.html', {"message": message})
+
+            if (check_password(password, someone.Password)):
                 return redirect('/home/')
+            else:
+                message = '用户名或密码错误'
+                return render(request,
+                              'login/login.html', {"message": message})
+
     return render(request, 'login/login.html')

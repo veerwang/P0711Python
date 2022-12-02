@@ -19,6 +19,13 @@
 			<div class="titleblank">
 			</div>
 			<form class='form-login' action="/login/" method="post">
+				{% if message %}
+
+					<script>
+						alert('{{ message }}');
+					</script>
+
+				{% endif %}
 				<!-- 关键代码需要添加，否则会产生错误 -->
 				{% csrf_token %}
 				<div class="form-group">
