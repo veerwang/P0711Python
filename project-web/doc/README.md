@@ -66,9 +66,12 @@ https://cn.vuejs.org/
 ## 7.什么是ORM
 ORM全称是：Object Relational Mapping(对象关系映射)，其主要作用是在编程中，把面向对象的概念跟数据库中表的概念对应起来。举例来说就是，我定义一个对象，那就对应着一张表，这个对象的实例，就对应着表中的一条记录
 
+
 ## 附录
 国内下载各个版本的python的路径
 https://registry.npmmirror.com/binary.html?path=python/
+网页错误的代码查询
+https://www.runoob.com/tags/html-httpmessages.html
 
 ## 学习网站
 
