@@ -1,0 +1,113 @@
+body {
+    box-sizing: border-box;
+    font-family: 微软雅黑;
+    margin: 0;
+		background: #A2DCFA;
+}
+
+/* 左半边视图显示 */
+.lefthalf {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	float: left;
+	background: white;
+	/* 内容居中 */
+	text-align: center;
+}
+
+
+/* logo标签 */
+.logoimg {
+		text-align: center;
+		padding-top: 35%;
+}
+
+/* 标题 */
+.smtitle {
+	font-size: 14px;
+	color: #B0ABAB;
+	text-align: center;
+	align-items: center;
+}
+
+/* 左半边视图显示 */
+.righthalf {
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	float: right;
+	background: #A2DCFA;
+	/* 内容居中 */
+	text-align: center;
+}
+
+.versioninfo {
+	padding-top: 2px;
+	padding-right: 5px;
+	font-size: 1px;
+	text-align: right;
+	color: #B0ABAB;
+	font-weight: normal;
+}
+
+.normaltitle {
+	font-size: 36px;
+	color: black;
+	text-align: center;
+	align-items: center;
+	font-weight: bold;
+	padding-top: 20%;
+}
+
+.titleblank {
+	padding-bottom: 60px;
+}
+
+.form-group {
+	padding: 5px;
+	text-align: center;
+}
+
+.form-control {
+	background-color: #FAF7F7;
+	font-size: 14px;
+	border:1px #797979 solid;
+	border-radius: 8px;
+	padding: 12px;
+}
+
+.form-control:focus {
+	background-color: #DEDBF5;
+	outline: 1px;
+	border-color: blue;
+}
+
+.form-btn {
+	width: 30%;
+	border-radius: 8px;
+	font-size: 14px;
+	padding: 10px;
+	border-color: gray;
+}
+
+.form-btn:focus {
+	outline: 1px;
+	background-color: #DEDBF5;
+	border-color: blue;
+}
+
+.form-btn:hover {
+	outline: 1px;
+	background-color: #F3CBCB;
+	border-color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.tipsinfo {
+	padding-top: 2px;
+	font-size: 1px;
+	color: #B0ABAB;
+	font-weight: normal;
+}

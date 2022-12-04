@@ -1,0 +1,48 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'login/style.css' %}">
+
+<div class="body">
+
+	<div class="lefthalf">
+		<div class="logoimg">
+			<img style="width:248px; height:127px;" src="{% static 'login/img/background.png' %}" alt="">
+				<div class="smtitle">厦门瀛寰海洋仪器有限公司</div>
+		</div>
+		<h1></h1>
+	</div>
+
+	<!-- 左右半边分离的界限 -->
+
+	<div class="righthalf">
+		<div class="versioninfo">V1.0.0-2022.12.02</div>
+		<div class="normaltitle">智 能 柜 监 控 系 统
+			<div class="titleblank">
+			</div>
+			<form class='form-login' action="/login/" method="post">
+				{% if message %}
+
+					<script>
+						alert('{{ message }}');
+					</script>
+
+				{% endif %}
+				<!-- 关键代码需要添加，否则会产生错误 -->
+				{% csrf_token %}
+				<div class="form-group">
+					<input type="text" name='username' class="form-control" id="id_username" placeholder="用户名" autofocus required>
+				</div>
+
+				<div class="form-group">
+					<input type="password" name='password' class="form-control" id="id_password" placeholder="密码" required>
+					<div class="tipsinfo">如有登陆问题请联系管理人员</div>
+				</div>
+
+				<div class="titleblank"></div>
+
+				<button type="submit" class="form-btn">登陆</button>
+				<button type="reset" class="form-btn">重置</button>
+			</form>
+		</div>
+	</div>
+
+</div>
