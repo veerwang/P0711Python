@@ -33,4 +33,6 @@ def index(request):
                 return render(request,
                               'login/login.html', {"message": message})
 
-    return render(request, 'login/login.html')
+    site_version = 'V1.0.0-2022.12.04'
+    context = {'site_version': site_version}
+    return render(request, 'login/login.html', context)

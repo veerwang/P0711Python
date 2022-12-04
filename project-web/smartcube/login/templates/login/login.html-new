@@ -23,7 +23,7 @@
 	<!-- 左右半边分离的界限 -->
 
 	<div class="righthalf">
-		<div class="versioninfo">V1.0.0-2022.12.02</div>
+		<div class="versioninfo">{{ site_version }}</div>
 		<div class="normaltitle">智 能 柜 监 控 系 统</div>
 		<div class="titleblank"> </div>
 		<div class="titleblank"> </div>
