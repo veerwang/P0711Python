@@ -1,12 +1,10 @@
 {% extends "home/base.html" %}
 
-{% block header%}
-<div class="header">
-  <h1>智能柜子中控系统</h1>
-  <p>地理位置显示 v2.0.0</p>
-</div>
-{% endblock %}
+<!-- 将头文件的内容分布到header.html当中 -->
 
+{% block header%}
+  {% include 'home/header.html' %}
+{% endblock %}
 
 {% block main %}
 <div class="navbar">
