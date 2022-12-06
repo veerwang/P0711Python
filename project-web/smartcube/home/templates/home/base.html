@@ -11,10 +11,27 @@
 	<!-- <link rel="stylesheet" href="{% static 'home/style.css' %}"> -->
 	<link rel="stylesheet" href="{% static 'bootstrap-4.6.2/css/bootstrap.min.css' %}">
 	<link rel="icon" href="{% static 'home/img/logo.png' %}">
+
+	<!-- 进行样式的补充 -->
+	<style type="text/css" title="背景">
+		body {
+			background: #A2DCFA;
+		}
+	</style>
 </head>
+
+<!-- 以下是主体模板-->
+
 <body>
-{% block header%}{% endblock %}
-{% block navbar%}{% endblock %}
+
+{% block header%}
+  {% include 'home/header.html' %}
+{% endblock %}
+
+{% block navbar%}
+  {% include 'home/navbar.html' %}
+{% endblock %}
+
 {% block main %}{% endblock %}
 {% block footer%}{% endblock %}
 
