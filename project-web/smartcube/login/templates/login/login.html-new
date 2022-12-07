@@ -24,7 +24,7 @@
 
 	<div class="righthalf">
 		<div class="versioninfo">{{ site_version }}</div>
-		<div class="normaltitle">智 能 柜 监 控 系 统</div>
+		<div class="normaltitle">智 慧 水 文 站 管 理 系 统</div>
 		<div class="titleblank"> </div>
 		<div class="titleblank"> </div>
 		<form class='form-login' action="/login/" method="post">

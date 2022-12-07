@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 import login.models
 from django.contrib.auth.hashers import check_password
+from globals.globalsvar import GlobalVars
 
 
 # Create your views here.
@@ -27,6 +28,7 @@ def index(request):
                                   'login/login.html', {"message": message})
 
             if (check_password(password, someone.Password)):
+                GlobalVars.getInstance().account = someone.Name
                 return redirect('/home/')
             else:
                 message = '用户名或密码错误'
