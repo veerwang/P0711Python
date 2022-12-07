@@ -1,11 +1,8 @@
-/* 首个css文件，学习使用 */
-* {
-    box-sizing: border-box;
-}
-
 /* body 样式 */
 body {
-    font-family: Arial;
+    box-sizing: border-box;
+		background: #A2DCFA;
+    font-family: 微软雅黑;
     margin: 0;
 }
 
