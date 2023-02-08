@@ -2,13 +2,14 @@
 #coding=utf-8
 
 #
-# 描述:		工程测试		 
-# 创建人: 	kevin.wang
-# 创建日期:     2019年11月15日 
-# 版本:		1.0.0     
+# 描述:		工程测试
+# 创建人:	kevin.wang
+# 创建日期:     2019年11月15日
+# 版本:		1.0.0
 
 import os
 import sqlite3
+
 
 # 运行数据库的语句
 def database_get_data(database,cmd):
