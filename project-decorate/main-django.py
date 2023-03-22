@@ -20,6 +20,14 @@ def permission_check(CoreFunction):
     return checkPermission
 
 
+def CheckingPermission(CoreFunction):
+    def CheckingPermission(*args, **kwargs):
+        print('new permission check')
+        return CoreFunction(*args, **kwargs)
+    return CheckingPermission
+
+
+@CheckingPermission
 @permission_check
 def getProvinceName(request, help):
     print(request)
